@@ -1,3 +1,24 @@
+fetch("https://imdb8.p.rapidapi.com/title/get-genres?tconst=tt0944947", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "d31dcc5144msh43d70fa79e055ddp1b7ef4jsnbda00aeaa388",
+		"x-rapidapi-host": "imdb8.p.rapidapi.com"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
+
+
+
+
+
+
+
+
 // -- initializing
 function init() {
 //    console.log("function init() called.");  /*  
@@ -145,12 +166,12 @@ function searchFor(string) {
    var success = false; 
    var request = ""+string+"";
    fetch(request)
-   .then(results => results.json())
-   .then(data) {
-        if (data.code == 200) {
-            success = true;
-       }
-   }
+   .then(results => results.json());
+//   .then(data) {
+//        if (data.code == 200) {
+//            success = true;
+//       }
+//   }
    return success;
 }
 
