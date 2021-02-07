@@ -7,273 +7,246 @@
     <title>WatchNext</title>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 
-<body style="background-color: gray;">
-    <header class="header"></header>
-
-    <div class="jumbotron">
-        <!-- <i class="fas fa-heart"></i> -->
-        <!--Your Saved Items-->
-        <h3 i style="color: black" class="fas fa-star"></i>Your Saved Items</h3>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                    </div>
+<body>
+    <header>
+        <!-- ANIMATED ICON -->
+        <div class="container">
+            <div class="columns">
+                <div class="column is-one-quarter" id="logo_hype_container" class="HYPE_document"
+                    style="margin-top:20px;margin-right:60px;position:relative;width:161px;height:31px;overflow:hidden;"></div>
+    
+                <!-- FORM -->
+                <div class="column is-three-quarters">
+                    <form>
+                        <input type="text" required id="search-term"
+                            placeholder="Search for movies, shows, people, channel">
+                        <button><i class="fas fa-search"></i></button>
+                    </form>
                 </div>
             </div>
         </div>
+    </header>
 
-        <!--Highest rated section-->
-        <h3 style="color: black" i class="fas fa-star"></i>Highest Rated Movies</h3>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
+    <div class="container">
+            <h1 class="section-headers"><i class="fas fa-film" style="padding-right: 12px;"></i>Saved for later</h1>
+            <div class="columns column-gap">
+                <div class="column is-2">
+                    <div class="card image">
+                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                        <h2 class="card-title">Movie name</h2>
+                        <button class="button-subtle">Watch on</button>
                     </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
+                </div>
+            
+                <div class="column is-2">
+                    <div class="card image">
+                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                        <h2 class="card-title">Movie name</h2>
+                        <button class="button-subtle">Watch on</button>
                     </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
+                </div>
+            
+                <div class="column is-2">
+                    <div class="card image">
+                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                        <h2 class="card-title">Movie name</h2>
+                        <button class="button-subtle">Watch on</button>
+                    </div>
+                </div>
+            
+                <div class="column is-2">
+                    <div class="card image">
+                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                        <h2 class="card-title">Movie name</h2>
+                        <button class="button-subtle">Watch on</button>
+                    </div>
+                </div>
+            
+            
+                <div class="column is-2">
+                    <div class="card image">
+                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                        <h2 class="card-title">Movie name</h2>
+                        <button class="button-subtle">Watch on</button>
+                    </div>
+                </div>
+
+                <div class="column is-2">
+                    <div class="card image">
+                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                        <h2 class="card-title">Movie name</h2>
+                        <button class="button-subtle">Watch on</button>
                     </div>
                 </div>
             </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                    </div>
+          
+
+        <!--Movies-->
+        <h1 class="section-headers"><i class="fas fa-star" style="padding-right: 12px;"></i>Highest Rated</h1>
+        <div class="columns column-gap">
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                    <h2 class="card-title">Movie name</h2>
+                    <button class="button-subtle">Watch on</button>
                 </div>
             </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                    </div>
+        
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                    <h2 class="card-title">Movie name</h2>
+                    <button class="button-subtle">Watch on</button>
                 </div>
             </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                    </div>
+        
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                    <h2 class="card-title">Movie name</h2>
+                    <button class="button-subtle">Watch on</button>
                 </div>
             </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                    </div>
+        
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                    <h2 class="card-title">Movie name</h2>
+                    <button class="button-subtle">Watch on</button>
                 </div>
             </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                    </div>
+        
+        
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                    <h2 class="card-title">Movie name</h2>
+                    <button class="button-subtle">Watch on</button>
                 </div>
             </div>
+
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                    <h2 class="card-title">Movie name</h2>
+                    <button class="button-subtle">Watch on</button>
+                </div>
+            </div>
+
         </div>
+
         <!--People-->
-        <h3 style="color: black" i class="fas fa-star"></i>People</h3>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                    </div>
+        <h1 class="section-headers"><i class="fas fa-user-alt" style="padding-right: 12px;"></i> People</h1>
+        <div class="columns column-gap">
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-person" src="./assets/Images/Thumbnail/search-input/Ellipse 1.png">
+                    <h2 class="card-title">Person name</h2>
                 </div>
             </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                    </div>
+
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-person" src="./assets/Images/Thumbnail/search-input/Ellipse 1.png">
+                    <h2 class="card-title">Person name</h2>
                 </div>
             </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                    </div>
+
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-person" src="./assets/Images/Thumbnail/search-input/Ellipse 1.png">
+                    <h2 class="card-title">Person name</h2>
                 </div>
             </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                    </div>
+
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-person" src="./assets/Images/Thumbnail/search-input/Ellipse 1.png">
+                    <h2 class="card-title">Person name</h2>
                 </div>
             </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                    </div>
+
+
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-person" src="./assets/Images/Thumbnail/search-input/Ellipse 1.png">
+                    <h2 class="card-title">Person name</h2>
                 </div>
             </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-image">
-                    </div>
-                    <div class="card-content">
-                        <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">John Smith</p>
-                        <p class="subtitle is-6">@johnsmith</p>
-                    </div>
+
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-person" src="./assets/Images/Thumbnail/search-input/Ellipse 1.png">
+                    <h2 class="card-title">Person name</h2>
                 </div>
             </div>
+
+
+
+
         </div>
         <!--Genres-->
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <p style="background-color: rgb(141, 17, 79); color: black" class="Genre">Adventure</p>
+        <h1 class="section-headers"><i class="fa fa-list-alt" style="padding-right: 12px;"></i> Genres</h1>
+        <div class="columns column-gap">
+            <div class="column is-2">
+                <div class="card horror">
+                    <h1 class="category-icon"><i class="fas fa-ghost"></i></h1>
+                    <h2 class="card-title">Horror</h2>
                 </div>
+
             </div>
-            <div class="column">
-                <div class="card">
-                    <p style="background-color: rgb(141, 17, 79); color: black" class="Genre">Action</p>
+            <div class="column is-2">
+                <div class="card romance">
+                    <h1 class="category-icon"><i class="far fa-grin-hearts"></i></h1>
+                    <h2 class="card-title">Romance</h2>
                 </div>
+
             </div>
-            <div class="column">
-                <div class="card">
-                    <p style="background-color: rgb(141, 17, 79); color: black" class="Genre">Horror</p>
+            <div class="column is-2">
+
+                <div class="card adventure">
+                    <h1 class="category-icon"><i class="fas fa-compass"></i></h1>
+                    <h2 class="card-title">Adventure</h2>
+                </div>
+
+            </div>
+            <div class="column is-2">
+                <div class="card comedy">
+                    <h1 class="category-icon"> <i class="far fa-smile"></i></h1>
+                    <h2 class="card-title">Comedy</h2>
+                </div>
+
+
+            </div>
+            <div class="column is-2">
+                <div class="card sci-fi">
+                    <h1 class="category-icon"><i class="fas fa-rocket"></i></h1>
+                    <h2 class="card-title">Sci-fi</h2>
                 </div>
             </div>
 
-            <div class="column">
-                <div class="card">
-                    <p style="background-color: rgb(141, 17, 79); color: black" class="Genre">Comedy</p>
+            <div class="column is-2">
+                <div class="card sport">
+                    <h1 class="category-icon"><i class="fas fa-futbol"></i></h1>
+                    <h2 class="card-title">Sport</h2>
                 </div>
             </div>
-            <div class="column">
-                <div class="card">
-                    <p style="background-color: rgb(141, 17, 79); color: black" class="Genre">Romantic</p>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <p style="background-color: rgb(141, 17, 79); color: black" class="Genre">Drama</p>
-                </div>
-            </div>
+
         </div>
     </div>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
-</body>
+    
+    <script type="text/javascript" charset="utf-8"
+        src="./assets/Logo.hyperesources/logo_hype_generated_script.js?89071"></script>
 
+
+</body>
 </html>
