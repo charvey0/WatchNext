@@ -1,16 +1,19 @@
-fetch("https://imdb8.p.rapidapi.com/title/get-genres?tconst=tt0944947", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "d31dcc5144msh43d70fa79e055ddp1b7ef4jsnbda00aeaa388",
-		"x-rapidapi-host": "imdb8.p.rapidapi.com"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
+
+function testFetch (){
+    fetch("https://imdb8.p.rapidapi.com/title/get-popular-movies-by-genre?genre=%2Fchart%2Fpopular%2Fgenre%2Fadventure", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-key": "d31dcc5144msh43d70fa79e055ddp1b7ef4jsnbda00aeaa388",
+            "x-rapidapi-host": "imdb8.p.rapidapi.com"
+        }
+    })
+    .then(response => {
+        console.log(response);
+    })
+    .catch(err => {
+        console.error(err);
+    });
+}
 
 
 
@@ -20,7 +23,7 @@ fetch("https://imdb8.p.rapidapi.com/title/get-genres?tconst=tt0944947", {
 
 
 // -- initializing
-function init(){
+function init() {
 //    console.log("function init() called.");  /*  
     if (showMatches()){
         return true;        
@@ -31,7 +34,7 @@ function init(){
 }
 
 // search localStorage for saved preferences
-function getPreferences(){
+function getPreferences() {
 //    console.log("function getPreferences() called.");  /*  
     var rtn = true;
     return rtn;
@@ -39,7 +42,7 @@ function getPreferences(){
 }
 
 // build fetch request form any exisiting data
-function getMoviesRequest(){
+function getMoviesRequest() {
 //    console.log("function getMoviesRequest() called.");  /*  
     var request = "";
 
