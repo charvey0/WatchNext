@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE-->
+    <title>WatchNext</title>
+
+    <!-- LINK TO BULMA CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!-- LINK TO LOCAL STYLESHEET-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- LINK TO GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <!-- HEADER CONTENT CONTAINER -->
+        <div class="container">
+            <div class="columns">
+                <!-- ANIMATED ICON -->
+                <div class="column is-one-quarter" id="logo_hype_container" class="HYPE_document"
+                    style="margin-top:20px;margin-right:60px;position:relative;width:161px;height:31px;overflow:hidden;">
+                </div>
+
+                <!-- FORM -->
+                <div class="column is-three-quarters">
+                    <form>
+                        <!-- INPUT -->
+                        <input type="text" required id="search-term"
+                            placeholder="Search for movies, shows, people, channel">
+
+                        <!-- SUBMIT BUTTON -->
+                        <button><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTAINER FOR DISPLAYING SEARCH REFINERS AND RESULTS -->
+    <div class="container">
+        <div class="columns">
+
+            <!-- SEARCH REFINERS -->
+            <div class="column is-one-quarter">
+                <div class="left-rail">
+                    <!-- HEADER -->
+                    <h4 class="left-rail-header">Refine search</h4>
+
+                    <!-- REFINER LIST GROUP-->
+                    <ul class="ul-filters" id="streaming-service">Streaming service
+
+                        <!-- REFINER LIST ITEM AND CHECKBOX-->
+                        <li class="li-filters"><label class="custom-box">Netflix
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label></li>
+
+                        <!-- REFINER LIST ITEM AND CHECKBOX-->
+                        <li class="li-filters"><label class="custom-box">Amazon Prime Video
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label></li>
+
+                        <!-- REFINER LIST ITEM AND CHECKBOX-->
+                        <li class="li-filters"><label class="custom-box">Hulu
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label></li>
+
+                        <!-- REFINER LIST ITEM AND CHECKBOX-->
+                        <li class="li-filters"><label class="custom-box">HBO
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label></li>
+                    </ul>
+
+                    <!-- REFINER LIST GROUP-->
+                    <ul class="ul-filters" id="subscription-type">Subscription type
+
+                        <!-- REFINER LIST ITEM AND CHECKBOX-->
+                        <li class="li-filters"><label class="custom-box">Free
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label></li>
+
+                        <!-- REFINER LIST ITEM AND CHECKBOX-->
+                        <li class="li-filters"><label class="custom-box">Paid
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- SEARCH RESULTS CONTAINER-->
+            <div class="column is-three-quarters">
+
+                <!-- SEARCH RESULTS TITLE AND NUMBER-->
+                <h1 class="search-result-text" id="result-information">3 results for <span style="color: white; font-weight: 700;">The Matrix
+                        Reloaded</span></h1>
+
+                <!-- SEARCH RESULTS CARD-->
+                <div class="search-cards" id="result-item">
+                    <div class="inner-layout">
+
+                        <!-- RESULT NAME AND YEAR OF RELEASE-->
+                        <h2 class="search-card-header">The Matrix Reloaded (2003)</h2>
+
+                        <!-- RESULT DESCRIPTION-->
+                        <p class="search-card-description">Freedom fighters Neo (Keanu Reeves), Trinity (Carrie-Anne
+                            Moss) and Morpheus (Laurence Fishburne) continue to lead the revolt against the Machine
+                            Army...</p>
+
+                        <!-- TAG LIST ACTORS-->
+                        <ul id="tags" style="padding-bottom: 28px;">
+                            <p style="color: white;">Actors</p>
+                            <li id="tags">Keanu Reeves</li>
+                            <li id="tags">Lawrence Fishburne</li>
+                            <li id="tags">Carrie-Anne Moss</li>
+                            <li id="tags">Jada Pinkett Smith</li>
+                            <li id="tags">Hugo Weaving</li>
+                            <li id="tags">Neil Patrick Harris</li>
+                        </ul>
+
+                        <!-- TAG LIST DIRECTOR & PRODUCER-->
+                        <ul id="tags" style="padding-bottom: 28px;">
+                            <p style="color: white;">Created by</p>
+                            <li id="tags">The Wachowskis</li>
+                            <li id="tags">Joel Silver</li>
+                        </ul>
+
+                        <!-- ACTIONS-->
+                        <button class="button-primary">Watch on</button>
+                        <button class="button-secondary">Watchlist <i class="fas fa-plus"></i></button>
+                    </div>
+
+                    <!-- EMBED YOUTUBE VIDEO PLAYER-->
+                    <div class="search-card-video">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zmYE3tg26Qc">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- SEARCH RESULTS CARD-->
+                <div class="search-cards">
+                    <div class="inner-layout">
+
+                        <!-- RESULT NAME AND YEAR OF RELEASE-->
+                        <h2 class="search-card-header">The Matrix (1999)</h2>
+
+                        <!-- RESULT DESCRIPTION-->
+                        <p class="search-card-description">Neo (Keanu Reeves) believes that Morpheus (Laurence
+                            Fishburne), an elusive figure considered to be the most dangerous man alive, can answer his
+                            question...</p>
+
+                        <!-- TAG LIST ACTORS-->
+                        <ul id="tags" style="padding-bottom: 28px;">
+                            <p style="color: white;">Actors</p>
+                            <li id="tags">Keanu Reeves</li>
+                            <li id="tags">Lawrence Fishburne</li>
+                            <li id="tags">Carrie-Anne Moss</li>
+                            <li id="tags">Jada Pinkett Smith</li>
+                            <li id="tags">Hugo Weaving</li>
+                            <li id="tags">Neil Patrick Harris</li>
+                        </ul>
+
+                        <!-- TAG LIST DIRECTOR & PRODUCER-->
+                        <ul id="tags" style="padding-bottom: 28px;">
+                            <p style="color: white;">Created by</p>
+                            <li id="tags">The Wachowskis</li>
+                            <li id="tags">Joel Silver</li>
+                        </ul>
+
+                        <!-- ACTIONS-->
+                        <button class="button-primary">Watch on</button>
+                        <button class="button-secondary">Watchlist <i class="fas fa-plus"></i></button>
+                    </div>
+
+                    <!-- EMBED YOUTUBE VIDEO PLAYER-->
+                    <div class="search-card-video">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tGgCqGm_6Hs">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- SEARCH RESULTS CARD-->
+                <div class="search-cards">
+                    <div class="inner-layout">
+
+                        <!-- RESULT NAME AND YEAR OF RELEASE-->
+                        <h2 class="search-card-header">The Matrix Revolutions (2003)</h2>
+
+                        <!-- RESULT DESCRIPTION-->
+                        <p class="search-card-description">In a dystopia overrun by robots, Neo (Keanu Reeves),
+                            mankind's greatest hope, is trapped in a limbo world. Meanwhile, the majority of the
+                            planet's population...</p>
+
+                        <!-- TAG LIST ACTORS-->
+                        <ul id="tags" style="padding-bottom: 28px;">
+                            <p style="color: white;">Actors</p>
+                            <li id="tags">Keanu Reeves</li>
+                            <li id="tags">Lawrence Fishburne</li>
+                            <li id="tags">Carrie-Anne Moss</li>
+                            <li id="tags">Jada Pinkett Smith</li>
+                            <li id="tags">Hugo Weaving</li>
+                            <li id="tags">Neil Patrick Harris</li>
+                        </ul>
+
+                        <!-- TAG LIST DIRECTOR & PRODUCER-->
+                        <ul id="tags" style="padding-bottom: 28px;">
+                            <p style="color: white;">Created by</p>
+                            <li id="tags">The Wachowskis</li>
+                            <li id="tags">Joel Silver</li>
+                        </ul>
+
+                        <!-- ACTIONS-->
+                        <button class="button-primary">Watch on</button>
+                        <button class="button-secondary">Watchlist <i class="fas fa-plus"></i></button>
+                    </div>
+
+                    <!-- EMBED YOUTUBE VIDEO PLAYER-->
+                    <div class="search-card-video">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NhoaoTZJSX4">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LINK TO JQUERY CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- LINK TO LOCAL JS-->
+    <script src="script.js"></script>
+
+    <!-- LINK TO FONT AWESOME CDN-->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- LINK TO LOCAL JS ANIMATION FILE FOR LOGO-->
+    <script type="text/javascript" charset="utf-8"
+        src="./assets/Logo.hyperesources/logo_hype_generated_script.js?89071"></script>
+
+</body>
+
+</html>
