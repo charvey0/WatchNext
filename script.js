@@ -15,7 +15,7 @@ function testFetch (){
     });
 }
 
-
+testFetch();
 
 
 
@@ -121,7 +121,7 @@ removeButton.on("click", function(e){
 
 // -- Searching for something
 // Search for something (movies, channel (streaming, + TV HBO Netflix, TV - CBS etc) person, show)
-var search = $("#search");
+var search = $("#search-term");
 var searchButton = $("#searchButton");
 var resultsDisplay = $("#resultsDisplay");
 
@@ -158,8 +158,6 @@ function displaySearchResults(results) {
 // Display view preview
 // Display name, description, add to watchlist (icon buttons), more(...) expands inline to show more details
 // Deeplink to service
-
-
     }
 }
 
@@ -167,7 +165,7 @@ function displaySearchResults(results) {
 
 function searchFor(string) {
    var success = false; 
-   var request = ""+string+"";
+   var request = "api.someSite.com?"+string+"/endpint";
    fetch(request)
    .then(results => results.json());
 //   .then(data) {
