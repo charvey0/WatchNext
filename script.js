@@ -1,21 +1,28 @@
+const api_key = "829b195aadec76715638d2dab724461b";
+
+
 
 function testFetch (){
-    fetch("https://imdb8.p.rapidapi.com/title/get-popular-movies-by-genre?genre=%2Fchart%2Fpopular%2Fgenre%2Fadventure", {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-key": "d31dcc5144msh43d70fa79e055ddp1b7ef4jsnbda00aeaa388",
-            "x-rapidapi-host": "imdb8.p.rapidapi.com"
-        }
-    })
-    .then(response => {
-        console.log(response);
-    })
-    .catch(err => {
-        console.error(err);
-    });
+    var posterBaseUrl = 'https://image.tmdb.org/t/p/w500/';
+    var popularPeopleBaseUrl = 'https://api.themoviedb.org/3/person/popular?api_key=';
+   var peopleEnd = '&language=en-US&page=1';
+//    https://api.themoviedb.org/3/person/popular?api_key=829b195aadec76715638d2dab724461b&language=en-US&page=1
+
+
+//    fetch("https://api.themoviedb.org/3/search/multi?api_key="+api_key+"&language=en-US&query=matrix&page=2&include_adult=false")
+//    .then(response => response.json())
+//    .then(data => {
+//        for(var i=0 ; i<data.results.length ; i++) {
+//console.log(data.results[i]);
+
+//console.log(data.results[i].title);
+//console.log(data.results[i].overview);
+//console.log(data.results[i].id);
+//        }
+//    });
 }
 
-
+init();
 
 
 
@@ -24,14 +31,156 @@ function testFetch (){
 
 // -- initializing
 function init() {
-//    console.log("function init() called.");  /*  
-    if (showMatches()){
-        return true;        
-    } else {
-        return false;
-    }
-// */
+    addMovies();
+    addPeople();
+    addGenres();
+    addCarousels();
+
+    // */
 }
+
+function addCarousels(){
+    bulmaCarousel.attach('#saved-for-later', {
+        slidesToScroll: 1,
+        slidesToShow: 6
+    });
+
+
+   bulmaCarousel.attach('#highest-rated', {
+        slidesToScroll: 4,
+        slidesToShow: 4
+    });
+
+}
+
+
+function addPeople() {
+    fetch("https://api.themoviedb.org/3/person/popular?api_key="+api_key+"&language=en-US&page=1")
+    .then(response => response.json())
+    .then(data => {
+        var people = $("#people");
+        people.empty();    
+        for(var i=0 ; i<data.results.length ; i++) {
+            people.append(`
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card image" value="`+data.results[i].id+`">
+                    <img class="img-person" src="https://image.tmdb.org/t/p/w500`+data.results[i].profile_path+`">
+                    <h2 class="card-title">`+data.results[i].name+`</h2>
+                </div>
+            </div>
+
+      `);
+        }
+    addPeopleListeners();
+    });
+
+}
+
+
+function addPeopleListeners() {
+    var genre = $("#people>div>.card");
+    genre.on("click", function(e){
+        var val = e.target.getAttribute("value");
+        if (val == null) {
+            val = e.target.parentElement.getAttribute("value");
+        }
+        if (val == null) {
+            val = e.target.parentElement.parentElement.getAttribute("value");
+        }
+        console.log(val);
+    });
+}    
+
+
+function addMovies() {
+    fetch("https://api.themoviedb.org/3/movie/popular?api_key="+api_key+"&language=en-US&page=1")
+    .then(response => response.json())
+    .then(data => {
+        var highest_rated = $("#highest-rated");
+        highest_rated.empty();    
+ console.log(data);       
+         for(var i=0 ; i<data.results.length ; i++) {
+             var item = i+1;
+             highest_rated.append(`
+             <!-- CARD ITEM-->
+             <div class="column is-2 item-`+item+`">
+                 <div class="card image" value="`+data.results[i].id+`">
+                     <img class="img-movie" src="https://image.tmdb.org/t/p/w500`+data.results[i].poster_path+`">
+                     <h2 class="card-title">`+data.results[i].title+`</h2>
+                     <button class="button-subtle">Watch on</button>
+
+                 </div>
+             </div>
+
+       `);
+         }
+    addMovieListeners();
+    });
+
+}
+
+// Hover - delay 300ms show popup, autoplays trailer, onMouseExit delay 100ms hide show video player - on movies
+// Watch on - dropdown option with service providers redirects to i.e. Netflix
+// bonus* deeplink to actual listing
+function addMovieListeners() {
+    var genre = $("#highest-rated>div>.card");
+    genre.on("click", function(e){
+        var val = e.target.getAttribute("value");
+        if (val == null) {
+            val = e.target.parentElement.getAttribute("value");
+        }
+        if (val == null) {
+            val = e.target.parentElement.parentElement.getAttribute("value");
+        }
+        console.log(val);
+    });
+}    
+
+
+
+
+
+function addGenres() {
+    fetch("https://api.themoviedb.org/3/genre/movie/list?api_key="+api_key+"&language=en-US")
+    .then(response => response.json())
+    .then(data => {
+        var genres = $("#genres");
+        genres.empty();    
+        for(var i=0 ; i<data.genres.length ; i++) {
+            genres.append(`
+            <!-- CARD ITEM-->
+           <div class="column is-2">
+                <div class="card horror `+data.genres[i].name+`" value="`+data.genres[i].id+`">
+                    <h1 class="category-icon"><i class="fas fa-ghost"></i></h1>
+                    <h2 class="card-title">`+data.genres[i].name+`</h2>
+                </div>
+            </div>
+        `);
+        }
+    addGenreListeners();
+    });
+
+}
+
+
+
+    // clicking on a genre triggers a search query with that term
+function addGenreListeners() {
+    var genre = $("#genres>div>.card");
+    genre.on("click", function(e){
+        var val = e.target.getAttribute("value");
+        if (val == null) {
+            val = e.target.parentElement.getAttribute("value");
+        }
+        if (val == null) {
+            val = e.target.parentElement.parentElement.getAttribute("value");
+        }
+        
+    });    
+}    
+
+
 
 // search localStorage for saved preferences
 function getPreferences() {
@@ -41,7 +190,7 @@ function getPreferences() {
 // */
 }
 
-// build fetch request form any exisiting data
+// build fetch request from any exisiting data
 function getMoviesRequest() {
 //    console.log("function getMoviesRequest() called.");  /*  
     var request = "";
@@ -83,25 +232,8 @@ function showMatches () {
 
 // -- OnClick/Hover card events
 
-// Hover - delay 300ms show popup, autoplays trailer, onMouseExit delay 100ms hide show video player - on movies
-// Watch on - dropdown option with service providers redirects to i.e. Netflix
-// bonus* deeplink to actual listing
-var movie = $(".movie");
-movie.on("click", function(e){
-  console.log("movie clicked.");
-});
 
-// clicking on a person triggers a search query with that name
-var person = $(".person");
-person.on("click", function(e){
-    console.log("person clicked.");
-});
 
-// clicking on a genre triggers a search query with that term
-var genre = $(".genre");
-genre.on("click", function(e){
-    console.log("genre clicked.");
-});
 
 
 // -- Add to watch list card events
@@ -121,7 +253,7 @@ removeButton.on("click", function(e){
 
 // -- Searching for something
 // Search for something (movies, channel (streaming, + TV HBO Netflix, TV - CBS etc) person, show)
-var search = $("#search");
+var search = $("#search-term");
 var searchButton = $("#searchButton");
 var resultsDisplay = $("#resultsDisplay");
 
@@ -158,8 +290,6 @@ function displaySearchResults(results) {
 // Display view preview
 // Display name, description, add to watchlist (icon buttons), more(...) expands inline to show more details
 // Deeplink to service
-
-
     }
 }
 
@@ -167,7 +297,7 @@ function displaySearchResults(results) {
 
 function searchFor(string) {
    var success = false; 
-   var request = ""+string+"";
+   var request = "api.someSite.com?"+string+"/endpint";
    fetch(request)
    .then(results => results.json());
 //   .then(data) {
@@ -220,6 +350,7 @@ function getWatchList() {
 function setWatchList(list) {
     return localStorage.setItem("watchList", JSON.stringify(list));
 } 
+
 
 
 
