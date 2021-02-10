@@ -96,11 +96,13 @@ Project website: https://charvey0.github.io/WatchNext/
 
 <!-- LICENSE -->
 ## License
+Distributed under the MIT License. 
 
+See [LICENSE](License.txt) for more information.
 
 <!-- CONTACT -->
 ## Contact
-Adam Stevenson
-Cameron Harvey
-Kay Davis
-Taylor Sanders
+Adam Stevenson<br>
+Cameron Harvey<br>
+Kay Davis<br>
+Taylor Sanders<br>
