@@ -33,24 +33,8 @@ init();
 function init() {
     addMovies();
     addPeople();
-    addGenres();
-    addCarousels();
-
+    addGenreListeners();
     // */
-}
-
-function addCarousels(){
-    bulmaCarousel.attach('#saved-for-later', {
-        slidesToScroll: 1,
-        slidesToShow: 6
-    });
-
-
-   bulmaCarousel.attach('#highest-rated', {
-        slidesToScroll: 4,
-        slidesToShow: 4
-    });
-
 }
 
 
@@ -60,7 +44,7 @@ function addPeople() {
     .then(data => {
         var people = $("#people");
         people.empty();    
-        for(var i=0 ; i<data.results.length ; i++) {
+        for(var i=0 ; i<6 ; i++) {
             people.append(`
             <!-- CARD ITEM-->
             <div class="column is-2">
@@ -88,9 +72,51 @@ function addPeopleListeners() {
         if (val == null) {
             val = e.target.parentElement.parentElement.getAttribute("value");
         }
-        console.log(val);
+        displayPerson(val);
     });
 }    
+
+
+function displayPerson(id) {
+    var req = "https://api.themoviedb.org/3/person/"+id+"?api_key="+api_key+"&language=en-US";
+    fetch (req)
+    .then(response => response.json())
+    .then(data => {
+
+var html = `
+    <div style="width:75%; margin:auto;">
+    <div class="search-cards">
+        <div class="inner-layout">
+            <h2 class="search-card-header">`+data.name+`</h2>
+            <p class="search-card-description">`+data.biography+`</p>
+            <ul id="tags" style="padding-bottom: 28px;">
+                <p style="color: white;">Date of Birth</p>
+                <li id="tags">`+data.birthday+`</li>`;
+            if (data.deathday) {
+                html += `                <p style="color: white;">Date of Death</p>
+                <li id="tags">`+data.deathday+`</li>
+                `;
+            }
+            html += `    
+            </ul>
+            <ul id="tags" style="padding-bottom: 28px;">
+                <p style="color: white;">Birthplace</p>
+                <li id="tags">`+data.place_of_birth+`</li>
+            </ul>
+        </div>
+        <div>
+        <img src="https://image.tmdb.org/t/p/w300`+data.profile_path+`">
+        </div>
+    </div>
+    </div>`;
+
+    $("#itemDisplay").html(html);
+    $("#itemDisplay").show();
+    $("#groupedLists").hide();
+    $("#hero").hide();
+        
+    });
+}
 
 
 function addMovies() {
@@ -99,16 +125,15 @@ function addMovies() {
     .then(data => {
         var highest_rated = $("#highest-rated");
         highest_rated.empty();    
- console.log(data);       
-         for(var i=0 ; i<data.results.length ; i++) {
+         for(var i=0 ; i<6 ; i++) {
              var item = i+1;
              highest_rated.append(`
              <!-- CARD ITEM-->
              <div class="column is-2 item-`+item+`">
                  <div class="card image" value="`+data.results[i].id+`">
-                     <img class="img-movie" src="https://image.tmdb.org/t/p/w500`+data.results[i].poster_path+`">
+                     <img class="img-movie" src="https://image.tmdb.org/t/p/w500/`+data.results[i].poster_path+`">
                      <h2 class="card-title">`+data.results[i].title+`</h2>
-                     <button class="button-subtle">Watch on</button>
+                     <a href="#" class="button-subtle">Watch on</a>
 
                  </div>
              </div>
@@ -133,21 +158,83 @@ function addMovieListeners() {
         if (val == null) {
             val = e.target.parentElement.parentElement.getAttribute("value");
         }
-        console.log(val);
+        displayMovie(val);
     });
 }    
 
+var html = "";
+
+
+function displayMovie(id) {
+    var req = "https://api.themoviedb.org/3/movie/"+id+"?api_key="+api_key+"&language=en-US";
+    fetch (req)
+    .then(response => response.json())
+    .then(data => {
+//        console.log(data);
+        html += `
+        <div style="width:75%; margin:auto;">
+        <div class="search-cards">
+            <div class="inner-layout">
+                <h2 class="search-card-header">`+data.title+`</h2>
+                <h3 class="search-card-header">`+data.tagline+`</h3>
+
+                <p class="search-card-description">`+data.overview+`</p>
+                <ul id="tags" style="padding-bottom: 28px;">
+                    <p style="color: white;">Release Date</p>
+                    <li id="tags">`+data.release_date+`</li>
+                    <p style="color: white;">Vote Average</p>
+                    <li id="tags">`+data.vote_average+`</li>
+                    <p style="color: white;">Vote Count</p>
+                    <li id="tags">`+data.vote_count+`</li>                    `;
+
+                html += `    
+                </ul>`;
+                
+
+                html += `<button class="button-primary watch-on" value="`+data.id+`">Watch on</button>`;
+
+//                            if ()
+//                <ul id="tags" style="padding-bottom: 28px;">
+//                    <p style="color: white;">Where to Watch</p>
+//                    <li id="tags">`+data.place_of_birth+`</li>
+//                </ul>
+            html += `</div>
+            <div>
+            <img src="https://image.tmdb.org/t/p/w300/`+data.poster_path+`">
+            </div>
+        </div>
+        </div>`;
+
+        $("#itemDisplay").html(html);
+    $("#itemDisplay").show();
+    $("#groupedLists").hide();
+    $("#hero").hide();
+    });
+    addWatchOnListeners();
+}
+
+function addWatchOnListeners() {
+     $(".watch-on").click(function(e) {
+         console.log(e.target);
+         var req = "https://api.themoviedb.org/3/movie/"+e.target.getAttribute("value")+"/watch/providers?api_key="+api_key;
+         fetch (req)
+         .then(response => response.json())
+         .then(data => {
+         console.log(data.results.US.link);
+         });    
+     });
+}
 
 
 
-
+/*
 function addGenres() {
     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key="+api_key+"&language=en-US")
     .then(response => response.json())
     .then(data => {
         var genres = $("#genres");
         genres.empty();    
-        for(var i=0 ; i<data.genres.length ; i++) {
+        for(var i=0 ; i<6 ; i++) {
             genres.append(`
             <!-- CARD ITEM-->
            <div class="column is-2">
@@ -162,7 +249,7 @@ function addGenres() {
     });
 
 }
-
+*/
 
 
     // clicking on a genre triggers a search query with that term
@@ -179,6 +266,7 @@ function addGenreListeners() {
         
     });    
 }    
+
 
 
 
@@ -293,20 +381,6 @@ function displaySearchResults(results) {
     }
 }
 
-
-
-function searchFor(string) {
-   var success = false; 
-   var request = "api.someSite.com?"+string+"/endpint";
-   fetch(request)
-   .then(results => results.json());
-//   .then(data) {
-//        if (data.code == 200) {
-//            success = true;
-//       }
-//   }
-   return success;
-}
 
 // OnFocus displays dropdown with dynamic string query matching
 

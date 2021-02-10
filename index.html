@@ -43,29 +43,32 @@
         </div>
     </header>
 
-    <!-- HERO INTRO ANIMATION -->
-    <div class="intro">
-        <div class="container">
-            <div class="columns column-gap">
-                <div class="column is-three-fifths" id="onloadanimation_hype_container" class="HYPE_document"
-                    style="margin:auto;position:relative;width:320px;height:568px;overflow:hidden;">
-                </div>
+        <!-- HERO INTRO ANIMATION -->
+        <div class="intro" id="hero">
+            <div class="container">
+                <div class="columns column-gap">
+                        <div class="column is-three-fifths" id="onloadanimation_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:320px;height:568px;overflow:hidden;">
+                        </div>
 
-                <!-- HERO INTRO TEXT AND ACTION -->
-                <div class="column is-two-fifths">
-                    <h1 class="intro-text" style="font-weight: 600;">No more wasted hours finding something to watch
-                    </h1>
-                    <button class="button-primary">Show me suggestions</button>
+                    <!-- HERO INTRO TEXT AND ACTION -->
+                    <div class="column is-two-fifths">
+                        <h1 class="intro-text" style="font-weight: 600;">No more wasted hours finding something to watch</h1>
+                        <button id="suggestButton" class="button-primary">Show me suggestions</button>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- CONTAINER FOR GROUPED LISTS-->
-    <div class="container" style="padding-left: 20px; padding-right: 20px;">
+        <!-- CONTAINER FOR GROUPED LISTS-->
+        <div id="itemDisplay"></div>
+        <div class="container" id="groupedLists" style="padding-left: 20px; padding-right: 20px;">
 
-        <!-- GROUPED LIST HEADER SAVED FOR LATER-->
-        <h1 class="section-headers"><i class="fas fa-film" style="padding-right: 12px;"></i>Saved for later</h1>
+            <!-- GROUPED LIST HEADER SAVED FOR LATER-->
+            <h1 class="section-headers"><i class="fas fa-film" style="padding-right: 12px;"></i>Saved for later</h1>
+
+
 
         <!-- CARD GROUP CONTAINER-->
         <div class="columns column-gap" id="saved-for-later">
