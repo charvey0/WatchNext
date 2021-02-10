@@ -1,6 +1,7 @@
 # WatchNext
 The application helps the user choose a movie or series over multiple services based on their preferences by retrieving data from [movie API].
----- this is sample text ---
+<!--INSERT PICTURE HERE-->
+--- this is sample text ---
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
