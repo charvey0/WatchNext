@@ -7,8 +7,12 @@
 <!-- TITLE-->
 <title>WatchNext</title>
 
+
 <!-- LINK TO BULMA CDN-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+<!-- LINK FOR CAROUSEL EFFECT-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
 
 <!-- LINK TO LOCAL STYLESHEET-->
 <link rel="stylesheet" href="./assets/css/style.css">
@@ -37,13 +41,7 @@
                         <!-- INPUT -->
                         <input type="text" required id="search-term"
                             placeholder="Search for movies, shows, people, channel">
-<<<<<<< HEAD
                         <button><i class="fas fa-search" id="searchButton"></i></button>
-=======
-
-                        <!-- SUBMIT BUTTON -->
-                        <button><i class="fas fa-search"></i></button>
->>>>>>> 3492e2c193ebae8db115ed468e238f10cf31a53e
                     </form>
                 </div>
             </div>
@@ -73,10 +71,38 @@
             <h1 class="section-headers"><i class="fas fa-film" style="padding-right: 12px;"></i>Saved for later</h1>
 
             <!-- CARD GROUP CONTAINER-->
-            <div class="columns column-gap" id="saved-for-later">
+            <div class="columns column-gap carousel" id="saved-for-later">
+
 
                 <!-- CARD ITEM-->
-                <div class="column is-2">
+                <div class="column is-2 item-1">
+                    <div class="card image">
+                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                        <h2 class="card-title">Movie name</h2>
+                        <button class="button-subtle">Watch on</button>
+                    </div>
+                </div>
+            
+                <!-- CARD ITEM-->
+                <div class="column is-2 item-2">
+                    <div class="card image">
+                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                        <h2 class="card-title">Movie name</h2>
+                        <button class="button-subtle">Watch on</button>
+                    </div>
+                </div>
+
+                <!-- CARD ITEM-->
+                <div class="column is-2 item-3">
+                    <div class="card image">
+                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                        <h2 class="card-title">Movie name</h2>
+                        <button class="button-subtle">Watch on</button>
+                    </div>
+                </div>
+            
+                <!-- CARD ITEM-->
+                <div class="column is-2 item-4">
                     <div class="card image">
                         <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
                         <h2 class="card-title">Movie name</h2>
@@ -86,7 +112,7 @@
             
                 <!-- CARD ITEM-->
                 <div class="column is-2">
-                    <div class="card image">
+                    <div class="card image item-5">
                         <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
                         <h2 class="card-title">Movie name</h2>
                         <button class="button-subtle">Watch on</button>
@@ -94,34 +120,7 @@
                 </div>
 
                 <!-- CARD ITEM-->
-                <div class="column is-2">
-                    <div class="card image">
-                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
-                        <h2 class="card-title">Movie name</h2>
-                        <button class="button-subtle">Watch on</button>
-                    </div>
-                </div>
-            
-                <!-- CARD ITEM-->
-                <div class="column is-2">
-                    <div class="card image">
-                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
-                        <h2 class="card-title">Movie name</h2>
-                        <button class="button-subtle">Watch on</button>
-                    </div>
-                </div>
-            
-                <!-- CARD ITEM-->
-                <div class="column is-2">
-                    <div class="card image">
-                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
-                        <h2 class="card-title">Movie name</h2>
-                        <button class="button-subtle">Watch on</button>
-                    </div>
-                </div>
-
-                <!-- CARD ITEM-->
-                <div class="column is-2">
+                <div class="column is-2 item-6">
                     <div class="card image">
                         <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
                         <h2 class="card-title">Movie name</h2>
@@ -135,7 +134,7 @@
         <h1 class="section-headers"><i class="fas fa-star" style="padding-right: 12px;"></i>Highest Rated</h1>
 
         <!-- CARD GROUP CONTAINER-->
-        <div class="columns column-gap">
+        <div class="columns column-gap carousel" id="highest-rated">
 
             <!-- CARD ITEM-->
             <div class="column is-2">
@@ -197,7 +196,7 @@
         <h1 class="section-headers"><i class="fas fa-user-alt" style="padding-right: 12px;"></i> People</h1>
 
         <!-- CARD GROUP CONTAINER-->
-        <div class="columns column-gap">
+        <div class="columns column-gap" id="people">
 
             <!-- CARD ITEM-->
             <div class="column is-2">
@@ -252,11 +251,11 @@
         <h1 class="section-headers"><i class="fa fa-list-alt" style="padding-right: 12px;"></i> Genres</h1>
 
         <!-- CARD GROUP CONTAINER-->
-        <div class="columns column-gap">
+        <div class="columns column-gap" id="genres">
 
-            <!-- CARD ITEM-->
+            <!-- CARD ITEM -->
             <div class="column is-2">
-                <div class="card horror">
+                <div class="card horror" value="27">
                     <h1 class="category-icon"><i class="fas fa-ghost"></i></h1>
                     <h2 class="card-title">Horror</h2>
                 </div>
@@ -264,7 +263,7 @@
 
             <!-- CARD ITEM-->
             <div class="column is-2">
-                <div class="card romance">
+                <div class="card romance" value="10749">
                     <h1 class="category-icon"><i class="far fa-grin-hearts"></i></h1>
                     <h2 class="card-title">Romance</h2>
                 </div>
@@ -272,7 +271,7 @@
 
             <!-- CARD ITEM-->
             <div class="column is-2">
-                <div class="card adventure">
+                <div class="card adventure" value="12">
                     <h1 class="category-icon"><i class="fas fa-compass"></i></h1>
                     <h2 class="card-title">Adventure</h2>
                 </div>
@@ -280,7 +279,7 @@
 
             <!-- CARD ITEM-->
             <div class="column is-2">
-                <div class="card comedy">
+                <div class="card comedy" value="35">
                     <h1 class="category-icon"> <i class="far fa-smile"></i></h1>
                     <h2 class="card-title">Comedy</h2>
                 </div>
@@ -288,7 +287,7 @@
 
             <!-- CARD ITEM-->
             <div class="column is-2">
-                <div class="card sci-fi">
+                <div class="card sci-fi" value="878">
                     <h1 class="category-icon"><i class="fas fa-rocket"></i></h1>
                     <h2 class="card-title">Sci-fi</h2>
                 </div>
@@ -300,14 +299,17 @@
                     <h1 class="category-icon"><i class="fas fa-futbol"></i></h1>
                     <h2 class="card-title">Sport</h2>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
 
     <!-- LINK TO JQUERY CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-    <!-- LINK TO FONT AWESOME CDN-->
+
+    <!-- LINK TO SLICK FOR CAROUSEL EFFECT-->
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+
+<!-- LINK TO FONT AWESOME CDN-->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     
     <!-- LINK TO LOCAL JS-->
