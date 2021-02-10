@@ -4,33 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITLE-->
     <title>WatchNext</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- LINK TO BULMA CDN-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!-- LINK TO LOCAL STYLESHEET-->
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- LINK TO GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
-<!-- TITLE-->
-<title>WatchNext</title>
-
-
-<!-- LINK TO BULMA CDN-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-
-<!-- LINK FOR CAROUSEL EFFECT-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
-
-<!-- LINK TO LOCAL STYLESHEET-->
-<link rel="stylesheet" href="./assets/css/style.css">
-
-<!-- LINK TO GOOGLE FONTS-->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
-    rel="stylesheet">
-    
 </head>
 
 <body>
@@ -56,87 +43,89 @@
         </div>
     </header>
 
+    <!-- HERO INTRO ANIMATION -->
+    <div class="intro">
+        <div class="container">
+            <div class="columns column-gap">
+                <div class="column is-three-fifths" id="onloadanimation_hype_container" class="HYPE_document"
+                    style="margin:auto;position:relative;width:320px;height:568px;overflow:hidden;">
+                </div>
 
-        <!-- HERO INTRO ANIMATION -->
-        <div class="intro">
-            <div class="container">
-                <div class="columns column-gap">
-                        <div class="column is-three-fifths" id="onloadanimation_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:320px;height:568px;overflow:hidden;">
-                        </div>
-
-                    <!-- HERO INTRO TEXT AND ACTION -->
-                    <div class="column is-two-fifths">
-                        <h1 class="intro-text" style="font-weight: 600;">No more wasted hours finding something to watch</h1>
-                        <button class="button-primary">Show me suggestions</button>
-                    </div>
+                <!-- HERO INTRO TEXT AND ACTION -->
+                <div class="column is-two-fifths">
+                    <h1 class="intro-text" style="font-weight: 600;">No more wasted hours finding something to watch
+                    </h1>
+                    <button class="button-primary">Show me suggestions</button>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- CONTAINER FOR GROUPED LISTS-->
-        <div class="container" style="padding-left: 20px; padding-right: 20px;">
+    <!-- CONTAINER FOR GROUPED LISTS-->
+    <div class="container" style="padding-left: 20px; padding-right: 20px;">
 
-            <!-- GROUPED LIST HEADER SAVED FOR LATER-->
-            <h1 class="section-headers"><i class="fas fa-film" style="padding-right: 12px;"></i>Saved for later</h1>
+        <!-- GROUPED LIST HEADER SAVED FOR LATER-->
+        <h1 class="section-headers"><i class="fas fa-film" style="padding-right: 12px;"></i>Saved for later</h1>
 
-            <!-- CARD GROUP CONTAINER-->
-            <div class="columns column-gap carousel" id="saved-for-later">
+        <!-- CARD GROUP CONTAINER-->
+        <div class="columns column-gap" id="saved-for-later">
 
-
-                <!-- CARD ITEM-->
-                <div class="column is-2 item-1">
-                    <div class="card image">
-                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
-                        <h2 class="card-title">Movie name</h2>
-                        <button class="button-subtle">Watch on</button>
-                    </div>
-                </div>
-            
-                <!-- CARD ITEM-->
-                <div class="column is-2 item-2">
-                    <div class="card image">
-                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
-                        <h2 class="card-title">Movie name</h2>
-                        <button class="button-subtle">Watch on</button>
-                    </div>
-                </div>
-
-                <!-- CARD ITEM-->
-                <div class="column is-2 item-3">
-                    <div class="card image">
-                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
-                        <h2 class="card-title">Movie name</h2>
-                        <button class="button-subtle">Watch on</button>
-                    </div>
-                </div>
-            
-                <!-- CARD ITEM-->
-                <div class="column is-2 item-4">
-                    <div class="card image">
-                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
-                        <h2 class="card-title">Movie name</h2>
-                        <button class="button-subtle">Watch on</button>
-                    </div>
-                </div>
-            
-                <!-- CARD ITEM-->
-                <div class="column is-2">
-                    <div class="card image item-5">
-                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
-                        <h2 class="card-title">Movie name</h2>
-                        <button class="button-subtle">Watch on</button>
-                    </div>
-                </div>
-
-                <!-- CARD ITEM-->
-                <div class="column is-2 item-6">
-                    <div class="card image">
-                        <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
-                        <h2 class="card-title">Movie name</h2>
-                        <button class="button-subtle">Watch on</button>
-                    </div>
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                    <h2 class="card-title">Movie name</h2>
+                    <button class="button-subtle">Watch on</button>
                 </div>
             </div>
+
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                    <h2 class="card-title">Movie name</h2>
+                    <button class="button-subtle">Watch on</button>
+
+                </div>
+            </div>
+
+
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                    <h2 class="card-title">Movie name</h2>
+                    <button class="button-subtle">Watch on</button>
+                </div>
+            </div>
+
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                    <h2 class="card-title">Movie name</h2>
+                    <button class="button-subtle">Watch on</button>
+                </div>
+            </div>
+
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                    <h2 class="card-title">Movie name</h2>
+                    <button class="button-subtle">Watch on</button>
+                </div>
+            </div>
+
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                    <h2 class="card-title">Movie name</h2>
+                    <button class="button-subtle">Watch on</button>
+                </div>
+            </div>
+        </div>
 
 
         <!-- GROUPED LIST HEADER MOVIES-->
@@ -154,9 +143,7 @@
                 </div>
             </div>
 
-
             <!-- CARD ITEM-->
-
             <div class="column is-2">
                 <div class="card image">
                     <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
@@ -164,9 +151,8 @@
                     <button class="button-subtle">Watch on</button>
                 </div>
             </div>
-        
-            <!-- CARD ITEM-->
 
+            <!-- CARD ITEM-->
             <div class="column is-2">
                 <div class="card image">
                     <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
@@ -174,9 +160,8 @@
                     <button class="button-subtle">Watch on</button>
                 </div>
             </div>
-  
-            <!-- CARD ITEM-->
 
+            <!-- CARD ITEM-->
             <div class="column is-2">
                 <div class="card image">
                     <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
@@ -184,9 +169,8 @@
                     <button class="button-subtle">Watch on</button>
                 </div>
             </div>
-    
-            <!-- CARD ITEM-->
 
+            <!-- CARD ITEM-->
             <div class="column is-2">
                 <div class="card image">
                     <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
@@ -320,22 +304,20 @@
     <!-- LINK TO JQUERY CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- LINK TO SLICK FOR CAROUSEL EFFECT-->
-    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <!-- LINK TO FONT AWESOME CDN-->
 
-<!-- LINK TO FONT AWESOME CDN-->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    
+
     <!-- LINK TO LOCAL JS-->
     <script src="script.js"></script>
-    
-    <!-- LINK TO LOCAL JS ANIMATION FILE FOR LOGO-->
 
+    <!-- LINK TO LOCAL JS ANIMATION FILE FOR LOGO-->
     <script type="text/javascript" charset="utf-8"
         src="./assets/Logo.hyperesources/logo_hype_generated_script.js?89071"></script>
-    
+
     <!-- LINK TO LOCAL JS ANIMATION FILE FOR INTRO-->
-    <script type="text/javascript" charset="utf-8"src="./assets/OnLoadAnimation.hyperesources/onloadanimation_hype_generated_script.js?94602"></script>
+    <script type="text/javascript" charset="utf-8"
+        src="./assets/OnLoadAnimation.hyperesources/onloadanimation_hype_generated_script.js?94602"></script>
 
 </body>
 

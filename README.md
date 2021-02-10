@@ -1,6 +1,7 @@
 # WatchNext
 The application helps the user choose a movie or series over multiple services based on their preferences by retrieving data from [movie API].
 <!--INSERT PICTURE HERE-->
+--- this is sample text ---
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
@@ -64,7 +65,7 @@ The application helps the user choose a movie or series over multiple services b
 #### HTML, CSS and Javascript & Jquery
 
 <!--LINKS-->
-Project repo link:
+Project repo link: https://github.com/charvey0/WatchNext
 <br>
 Project website:
 
