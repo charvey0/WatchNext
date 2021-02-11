@@ -243,6 +243,18 @@ h2 {
     padding-bottom: 8px;
 }
 
+h3 {
+    font-family: IBM Plex Sans;
+    font-size: 24px;
+    color: gray;
+    text-align: start;
+    font-weight: 800px;
+    font-style: normal;
+    padding-bottom: 8px;
+}
+
+
+
 /* GROUPED LIST ELEMENTS & CARDS */
 
 .category-icon {
@@ -337,7 +349,7 @@ h2 {
     padding-bottom: 60px;
 }
 
-.sport{
+.crime{
     background-image: linear-gradient(to bottom, #0575E6,#021B79);
     padding-bottom: 60px;
 }
