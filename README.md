@@ -76,20 +76,14 @@ HTML, CSS and Javascript files include the source code for running the WatchNext
 ## Project deliverables
 
 #### Included functionality:
+#### HTML, CSS and Javascript & Jquery
+
 <img src="assets/Images/onLoad1.png">
 <img src="assets/Images/onClick2.png">
 <img src="assets/Images/onHover3.png">
 <img src="assets/Images/onSubmit4.png">
 <img src="assets/Images/onReturn5.png">
 <img src="assets/Images/onClick6.png">
-
-#### HTML, CSS and Javascript & Jquery
-
-<!--LINKS-->
-Project repo link: https://github.com/charvey0/WatchNext
-<br>
-Project website: https://charvey0.github.io/WatchNext/
-
 
 ### Responsive view example - On mobile
 <img src="assets/Images/responsive-pic.png">
@@ -100,7 +94,13 @@ Project website: https://charvey0.github.io/WatchNext/
 
 <!-- CONTACT -->
 ## Contact
-Adam Stevenson
-Cameron Harvey
-Kay Davis
-Taylor Sanders
+Adam Stevenson<br>
+Cameron Harvey<br>
+Kay Davis<br>
+Taylor Sanders<br>
+<br>
+
+<!--LINKS-->
+Project repo link: https://github.com/charvey0/WatchNext
+<br>
+Project website: https://charvey0.github.io/WatchNext/
