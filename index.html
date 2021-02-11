@@ -13,6 +13,10 @@
     <!-- LINK TO LOCAL STYLESHEET-->
     <link rel="stylesheet" href="./assets/css/style.css">
 
+    <!-- LINK TO FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
     <!-- LINK TO GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -34,8 +38,7 @@
                 <div class="column is-three-quarters">
                     <form>
                         <!-- INPUT -->
-                        <input type="text" id="search-term"
-                            placeholder="Search for movies, shows, people, channel">
+                        <input type="text" id="search-term" placeholder="Search for movies, shows, people, channel">
                         <button id="searchButton"><i class="fas fa-search"></i>Search</button>
                     </form>
                 </div>
@@ -43,81 +46,84 @@
         </div>
     </header>
 
-        <!-- HERO INTRO ANIMATION -->
-        <div class="intro" id="hero">
-            <div class="container">
-                <div class="columns column-gap">
-                        <div class="column is-three-fifths" id="onloadanimation_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:320px;height:568px;overflow:hidden;">
-                        </div>
-
-                    <!-- HERO INTRO TEXT AND ACTION -->
-                    <div class="column is-two-fifths">
-                        <h1 class="intro-text" style="font-weight: 600;">No more wasted hours finding something to watch</h1>
-                        <button id="suggestButton" class="button-primary">Show me suggestions</button>
-                        <button id="listButton" class="button-secondary" style="padding: 10px;">Hide My List</button>
-                    </div>
-
+    <!-- HERO INTRO ANIMATION -->
+    <div class="intro" id="hero">
+        <div class="container">
+            <div class="columns column-gap">
+                <div class="column is-three-fifths" id="onloadanimation_hype_container" class="HYPE_document"
+                    style="margin:auto;position:relative;width:320px;height:568px;overflow:hidden;">
                 </div>
+
+                <!-- HERO INTRO TEXT AND ACTION -->
+                <div class="column is-two-fifths">
+                    <h1 class="intro-text" style="font-weight: 600;">No more wasted hours finding something to watch
+                    </h1>
+                    <button id="suggestButton" class="button-primary">Show me suggestions</button>
+                    <button id="listButton" class="button-secondary" style="padding: 10px;">Hide My List</button>
+                </div>
+
             </div>
         </div>
     </div>
+    </div>
 
-        <!-- CONTAINER FOR GROUPED LISTS-->
-        <div id="itemDisplay"></div>
-        <div class="container" id="groupedLists" style="padding-left: 20px; padding-right: 20px;">
+    <!-- CONTAINER FOR GROUPED LISTS-->
+    <div id="itemDisplay"></div>
+    <div class="container" id="groupedLists" style="padding-left: 20px; padding-right: 20px;">
 
-            <!-- GROUPED LIST HEADER SAVED FOR LATER-->
-            <h1 class="section-headers" id="myListHeader"><i class="fas fa-film" style="padding-right: 12px;"></i>My List</h1>
+        <!-- GROUPED LIST HEADER SAVED FOR LATER-->
+        <h1 class="section-headers" id="myListHeader"><i class="fas fa-film" style="padding-right: 12px;"></i>My List
+        </h1>
 
 
 
-                <!-- CARD GROUP CONTAINER-->
-                <div class="columns column-gap" id="saved-for-later">
+        <!-- CARD GROUP CONTAINER-->
+        <div class="columns column-gap" id="saved-for-later">
 
-                    <!-- CARD ITEM-->
-                    <div class="column is-2">
-                        <div class="card image">
-                            <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
-                            <h2 class="card-title">Movie name</h2>
-                            <button class="button-subtle">Watch on</button>
-                        </div>
-                    </div>
-
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                    <h2 class="card-title">Movie name</h2>
+                    <button class="button-subtle">Watch on</button>
                 </div>
+            </div>
+
+        </div>
 
 
         <!-- GROUPED LIST HEADER MOVIES-->
         <h1 class="section-headers"><i class="fas fa-star" style="padding-right: 12px;"></i>Highest Rated</h1>
 
-            <!-- CARD GROUP CONTAINER-->
-            <div class="columns column-gap" id="highest-rated">
+        <!-- CARD GROUP CONTAINER-->
+        <div class="columns column-gap" id="highest-rated">
 
-                    <!-- CARD ITEM-->
-                    <div class="column is-2">
-                        <div class="card image">
-                         <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
-                            <h2 class="card-title">Movie name</h2>
-                            <button class="button-subtle">Watch on</button>
-                        </div>
-                    </div>
-
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-movie" src="./assets/Images/Thumbnail/movie1.png">
+                    <h2 class="card-title">Movie name</h2>
+                    <button class="button-subtle">Watch on</button>
+                </div>
             </div>
+
+        </div>
 
         <!-- GROUPED LIST HEADER ACTORS-->
         <h1 class="section-headers"><i class="fas fa-user-alt" style="padding-right: 12px;"></i> People</h1>
 
-                <!-- CARD GROUP CONTAINER-->
-                <div class="columns column-gap" id="people">
+        <!-- CARD GROUP CONTAINER-->
+        <div class="columns column-gap" id="people">
 
-                    <!-- CARD ITEM-->
-                    <div class="column is-2">
-                        <div class="card image">
-                            <img class="img-person" src="./assets/Images/Thumbnail/search-input/Ellipse 1.png">
-                            <h2 class="card-title">Person name</h2>
-                        </div>
-                    </div>
-
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card image">
+                    <img class="img-person" src="./assets/Images/Thumbnail/search-input/Ellipse 1.png">
+                    <h2 class="card-title">Person name</h2>
                 </div>
+            </div>
+
+        </div>
 
         <!-- GROUPED LIST HEADER GENRES-->
         <h1 class="section-headers"><i class="fa fa-list-alt" style="padding-right: 12px;"></i> Genres</h1>
@@ -125,61 +131,61 @@
         <!-- CARD GROUP CONTAINER-->
         <div class="columns column-gap" id="genres">
 
-                <!-- CARD ITEM -->
-                <div class="column is-2">
-                    <div class="card horror" value="27">
-                        <h1 class="category-icon"><i class="fas fa-ghost"></i></h1>
-                        <h2 class="card-title">Horror</h2>
-                  </div>
+            <!-- CARD ITEM -->
+            <div class="column is-2">
+                <div class="card horror" value="27">
+                    <h1 class="category-icon"><i class="fas fa-ghost"></i></h1>
+                    <h2 class="card-title">Horror</h2>
                 </div>
+            </div>
 
-                <!-- CARD ITEM-->
-                <div class="column is-2">
-                    <div class="card romance" value="10749">
-                        <h1 class="category-icon"><i class="far fa-grin-hearts"></i></h1>
-                        <h2 class="card-title">Romance</h2>
-                    </div>
-               </div>
-
-                <!-- CARD ITEM-->
-                <div class="column is-2">
-                    <div class="card adventure" value="12">
-                        <h1 class="category-icon"><i class="fas fa-compass"></i></h1>
-                        <h2 class="card-title">Adventure</h2>
-                    </div>
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card romance" value="10749">
+                    <h1 class="category-icon"><i class="far fa-grin-hearts"></i></h1>
+                    <h2 class="card-title">Romance</h2>
                 </div>
+            </div>
 
-                <!-- CARD ITEM-->
-                <div class="column is-2">
-                    <div class="card comedy" value="35">
-                        <h1 class="category-icon"> <i class="far fa-smile"></i></h1>
-                        <h2 class="card-title">Comedy</h2>
-                  </div>
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card adventure" value="12">
+                    <h1 class="category-icon"><i class="fas fa-compass"></i></h1>
+                    <h2 class="card-title">Adventure</h2>
                 </div>
+            </div>
 
-                <!-- CARD ITEM-->
-                <div class="column is-2">
-                    <div class="card sci-fi" value="878">
-                        <h1 class="category-icon"><i class="fas fa-rocket"></i></h1>
-                        <h2 class="card-title">Sci-fi</h2>
-                    </div>
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card comedy" value="35">
+                    <h1 class="category-icon"> <i class="far fa-smile"></i></h1>
+                    <h2 class="card-title">Comedy</h2>
                 </div>
+            </div>
 
-                <!-- CARD ITEM-->
-                <div class="column is-2">
-                    <div class="card crime" value="80">
-                        <h1 class="category-icon"><i class="fas fa-fingerprint"></i></h1>
-                        <h2 class="card-title">Crime</h2>
-                    </div>
-                </div> 
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card sci-fi" value="878">
+                    <h1 class="category-icon"><i class="fas fa-rocket"></i></h1>
+                    <h2 class="card-title">Sci-fi</h2>
+                </div>
+            </div>
+
+            <!-- CARD ITEM-->
+            <div class="column is-2">
+                <div class="card crime" value="80">
+                    <h1 class="category-icon"><i class="fas fa-fingerprint"></i></h1>
+                    <h2 class="card-title">Crime</h2>
+                </div>
             </div>
         </div>
+    </div>
 
     <!-- LINK TO JQUERY CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- LINK TO FONT AWESOME CDN-->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- LINK TO FONT AWESOME CDN
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
 
     <!-- LINK TO LOCAL JS-->
     <script src="script.js"></script>
