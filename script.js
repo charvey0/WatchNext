@@ -78,7 +78,7 @@ function showWatchList() {
             <!-- CARD ITEM-->
             <div class="column is-2">
                 <div class="card image list-movie" value="`+ list[i] + `">
-                    <img class="img-movie" src="https://image.tmdb.org/t/p/w500/`+ data.poster_path + `">
+                    <img class="img-movie" src="https://image.tmdb.org/t/p/w500`+ data.poster_path + `">
                     <h2 class="card-title">`+ data.title + `</h2>
                     <a href="#" class="button-subtle">Watch on</a>
 
@@ -112,7 +112,7 @@ function addPeople() {
             <!-- CARD ITEM-->
             <div class="column is-2">
                 <div class="card image" value="`+ data.results[i].id + `">
-                    <img class="img-person" src="https://image.tmdb.org/t/p/w500`+ data.results[i].profile_path + `">
+                    <img class="img-person" src="https://image.tmdb.org/t/p/w500/`+ data.results[i].profile_path + `">
                     <h2 class="card-title">`+ data.results[i].name + `</h2>
                 </div>
             </div>
