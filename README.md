@@ -2,7 +2,7 @@
 The application helps the user choose a movie or series over multiple services based on their preferences by retrieving data from [movie API].
 
 <!--INSERT PICTURE HERE-->
-<img src="assets/Images/indexHTML copy.png">
+<img src="assets/Images/New-index-pic.png">
 
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
