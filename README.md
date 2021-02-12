@@ -2,7 +2,7 @@
 The application helps the user choose a movie or series over multiple services based on their preferences by retrieving data from [movie API].
 
 <!--INSERT PICTURE HERE-->
-<img src="assets/Images/indexHTML copy.png">
+<img src="assets/Images/New-index-pic.png">
 
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
@@ -76,20 +76,14 @@ HTML, CSS and Javascript files include the source code for running the WatchNext
 ## Project deliverables
 
 #### Included functionality:
+#### HTML, CSS and Javascript & Jquery
+
 <img src="assets/Images/onLoad1.png">
 <img src="assets/Images/onClick2.png">
 <img src="assets/Images/onHover3.png">
 <img src="assets/Images/onSubmit4.png">
 <img src="assets/Images/onReturn5.png">
 <img src="assets/Images/onClick6.png">
-
-#### HTML, CSS and Javascript & Jquery
-
-<!--LINKS-->
-Project repo link: https://github.com/charvey0/WatchNext
-<br>
-Project website: https://charvey0.github.io/WatchNext/
-
 
 ### Responsive view example - On mobile
 <img src="assets/Images/responsive-pic.png">
