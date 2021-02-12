@@ -213,13 +213,13 @@ function addMovies() {
                 var item = i + 1;
                 highest_rated.append(`
              <!-- CARD ITEM-->
-             <div class="column is-2 item-`+ item + `">
-                 <div class="card image" value="`+ data.results[i].id + `">
-                     <img class="img-movie" src="https://image.tmdb.org/t/p/w500/`+ data.results[i].poster_path + `">
-                     <h2 class="card-title">`+ data.results[i].title + `</h2>
-                     <a href="#" class="button-subtle">Watch on</a>
+             <div class="column is-2 item-`+item+`">
+                 <div class="card image" value="`+data.results[i].id+`">
+                     <img class="img-movie" src="https://image.tmdb.org/t/p/w500/`+data.results[i].poster_path+`">
+                     <h2 class="card-title">`+data.results[i].title+`</h2>`);
+//                   html += `<a href="#" class="button-subtle">Watch on</a>`;
 
-                 </div>
+            highest_rated.append(`</div>
              </div>
 
        `);
@@ -361,22 +361,6 @@ function setGenre(g) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // clicking on a genre triggers a search query with that term
 function addGenreListeners() {
     var genre = $("#genres>div>.card");
@@ -432,7 +416,7 @@ function displaySearchResults(data) {
                         <button class="button-secondary" id="backButton" style="margin-top:40px; width: 100%;"><i class="fas fa-arrow-left" style="padding-right: 12px;"></i> Back</button>
                     </div>
                     <div class="column is-10">
-                        <h1 class="search-result-text" id="result-information"><span id="numberOfResults"></span> results for <span style="color: white; font-weight: 700;">The Matrix Reloaded</span></h1>
+                        <h1 class="search-result-text" id="result-information"><span id="numberOfResults"></span> Results:<span style="color: white; font-weight: 700;"></span></h1>
                     </div>
                 </div>`;
     for (var i = 0; i < data.results.length; i++) {
